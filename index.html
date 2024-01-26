@@ -5,8 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>projeto-final</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body class="flex flex-col bg-gray-800">
+    <nav
+      id="MENU"
+      class="fixed w-screen h-screen text-3xl lg:hidden justify-center gap-10 items-center flex flex-col bg-red-400 z-40 text-white"
+    >
+      <section id="MENU-ICON-CLOSE" class="absolute top-8 right-8">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="32"
+          height="32"
+          viewBox="0 0 24 24"
+        >
+          <path
+            fill="currentColor"
+            d="m8.4 17l3.6-3.6l3.6 3.6l1.4-1.4l-3.6-3.6L17 8.4L15.6 7L12 10.6L8.4 7L7 8.4l3.6 3.6L7 15.6zm3.6 5q-2.075 0-3.9-.788t-3.175-2.137q-1.35-1.35-2.137-3.175T2 12q0-2.075.788-3.9t2.137-3.175q1.35-1.35 3.175-2.137T12 2q2.075 0 3.9.788t3.175 2.137q1.35 1.35 2.138 3.175T22 12q0 2.075-.788 3.9t-2.137 3.175q-1.35 1.35-3.175 2.138T12 22m0-2q3.35 0 5.675-2.325T20 12q0-3.35-2.325-5.675T12 4Q8.65 4 6.325 6.325T4 12q0 3.35 2.325 5.675T12 20m0-8"
+          />
+        </svg>
+      </section>
+      <section>Works</section>
+      <section>Blog</section>
+      <section>Contato</section>
+    </nav>
     <section class="">
       <section class="h-12 text-white flex flex-col items-end py-1 px-2">
         <section class="hidden lg:flex w-2/5 flex-row">
@@ -16,7 +42,7 @@
             <div>contato</div>
           </section>
         </section>
-        <section class="lg:hidden">
+        <section id="MENU-ICON" class="text-white">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="40"
@@ -29,28 +55,25 @@
             />
           </svg>
         </section>
+        <section></section>
       </section>
       <section class="lg:flex flex-row-reverse justify-center">
         <section class="lg:w-1/5 lg:flex flex-row items-center">
           <section
-            class="h-56 flex flex-col items-center py-11 lg:w-4/5 lg:justify-center"
+            class="h-60 flex flex-col items-center py-11 lg:w-4/5 lg:justify-center"
           >
-            <img
-              src="./assets/imagens/Ellipse 1.png"
-              class="lg:w-full"
-              alt=""
-            />
+            <img src="./assets/imagens/ellipse1.png" class="lg:w-full" alt="" />
           </section>
         </section>
         <section class="lg:w-2/5 lg:flex lg:flex-col justify-between lg:mt-32">
-          <section class="h-36 text-4xl font-bold">
+          <section class="h-40 text-4xl font-bold">
             <div
               class="text-white text-center lg:text-start lg:py-0 lg:px-0 py-5 px-5"
             >
               Olá, sou aluno do curso de Front-End da Elaborata
             </div>
           </section>
-          <section class="h-28 text-center text-white lg:py-0 py-4">
+          <section class="h-32 text-center text-white lg:py-0 py-4">
             <div
               class="text-center lg:text-start lg:px-0 text-white opacity-80 px-6 lg:pr-10"
             >
@@ -60,7 +83,7 @@
             </div>
           </section>
           <section
-            class="h-24 flex flex-col items-center lg:items-start lg:p-0 p-6"
+            class="h-28 flex flex-col items-center lg:items-start lg:p-0 p-6"
           >
             <button class="text-white bg-red-400 h-12 w-56 text-xl font-bold">
               Download CV
@@ -73,16 +96,16 @@
       class="bg-zinc-700 h-[668px] lg:h-96 flex flex-col justify-between items-center py-8"
     >
       <section
-        class="h-12 w-[376px] lg:w-3/5 flex flex-row justify-between font-bold text-lg text-white pb-5"
+        class="h-12 w-[360px] lg:w-3/5 flex flex-row justify-between font-bold text-lg text-white pb-5"
       >
         <div>Posts Recentes</div>
         <div class="text-red-400">Ver tudo</div>
       </section>
       <section
-        class="h-full lg:w-3/5 flex flex-col lg:flex-row justify-between"
+        class="h-full lg:w-3/5 flex items-center flex-col lg:flex-row justify-between"
       >
         <section
-          class="bg-gray-800 text-white h-64 w-[376px] flex-col flex justify-between shadow-slate-500 shadow-lg"
+          class="bg-gray-800 text-white h-64 w-[352px] flex-col flex justify-between shadow-slate-500 shadow-lg"
         >
           <div class="text-[26px] font-bold p-5">Front-End Elaborata</div>
           <div>
@@ -99,7 +122,7 @@
           </div>
         </section>
         <section
-          class="bg-gray-800 text-white h-64 w-[376px] flex-col flex justify-between shadow-slate-500 shadow-lg"
+          class="bg-gray-800 text-white h-64 w-[352px] flex-col flex justify-between shadow-slate-500 shadow-lg"
         >
           <div class="text-[26px] font-bold p-5">Framework CSS</div>
           <div>
@@ -135,11 +158,11 @@
 
       <section class="lg:w-[760px] lg:h-52 flex flex-col justify-between">
         <section
-          class="h-[480px] w-[376px] flex flex-col justify-between lg:flex-row lg:w-full lg:h-full"
+          class="h-[480px] w-[360px] flex flex-col justify-between lg:flex-row lg:w-full lg:h-full"
         >
           <div>
             <img
-              src="./assets/imagens/Rectangle 31.png"
+              src="./assets/imagens/rectangle31.png"
               class="w-full lg:w-64"
               alt=""
             />
@@ -174,11 +197,11 @@
       </section>
       <section class="lg:w-[760px] lg:h-52 flex flex-col justify-between">
         <section
-          class="h-[480px] w-[376px] flex flex-col justify-between lg:flex-row lg:w-full lg:h-full"
+          class="h-[480px] w-[360px] flex flex-col justify-between lg:flex-row lg:w-full lg:h-full"
         >
           <div>
             <img
-              src="./assets/imagens/Rectangle 32.png"
+              src="./assets/imagens/rectangle32.png"
               class="w-full lg:w-64"
               alt=""
             />
@@ -213,11 +236,11 @@
       </section>
       <section class="lg:w-[760px] lg:h-52 flex flex-col justify-between">
         <section
-          class="h-[480px] w-[376px] flex flex-col justify-between lg:flex-row lg:w-full lg:h-full"
+          class="h-[480px] w-[360px] flex flex-col justify-between lg:flex-row lg:w-full lg:h-full"
         >
           <div>
             <img
-              src="./assets/imagens/Rectangle 30.png"
+              src="./assets/imagens/rectangle30.png"
               class="w-full lg:w-64"
               alt=""
             />
@@ -322,8 +345,26 @@
         </section>
       </section>
       <div class="flex flex-col items-center pt-10">
-        <img src="./assets/imagens/nova-logo-elaborata 1.png" class="" alt="" />
+        <img src="./assets/imagens/nova-logo-elaborata1.png" class="" alt="" />
       </div>
     </section>
+    <script>
+      $("#MENU").hide();
+      function handleMenu(type) {
+        switch (type) {
+          case "show":
+            $("#MENU").show();
+            break;
+          case "hide":
+            $("#MENU").hide();
+            break;
+
+          default:
+            break;
+        }
+      }
+      $("#MENU-ICON").click(() => handleMenu("show"));
+      $("#MENU-ICON-CLOSE").click(() => handleMenu("hide"));
+    </script>
   </body>
 </html>
