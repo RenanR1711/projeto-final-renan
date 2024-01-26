@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>projeto-final</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script
       src="https://code.jquery.com/jquery-3.7.1.min.js"
@@ -354,9 +359,15 @@
         switch (type) {
           case "show":
             $("#MENU").show();
+            $("#MENU").removeClass("animate__fadeOut");
+            $("#MENU").addClass("animate__animated animate__fadeIn");
             break;
           case "hide":
-            $("#MENU").hide();
+            $("#MENU").removeClass("animate__fadeIn");
+            $("#MENU").addClass("animate__animated animate__fadeOut");
+            setTimeout(function () {
+              $("#MENU").hide();
+            }, 1000);
             break;
 
           default:
